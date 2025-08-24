@@ -7,9 +7,9 @@ app.use(express.json());
 
 // Sample student data
 const students = [
-  { id: 1, name: 'Aarav', grade: 'A' },
-  { id: 2, name: 'Ishita', grade: 'B+' },
-  { id: 3, name: 'Rohan', grade: 'A-' }
+  { id: 1, name: 'Arush', grade: 'A' },
+  { id: 2, name: 'Reem', grade: 'B+' },
+  { id: 3, name: 'Ruhi', grade: 'A-' }
 ];
 
 // GET route to return student list
@@ -33,3 +33,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
