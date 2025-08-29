@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Custom styles for form focus and transitions */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4ade80;
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.4);
+}
+
+button {
+  transition: background-color 0.2s ease;
+}
