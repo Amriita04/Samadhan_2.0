@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Styled Product Card List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+  <h1 class="text-3xl font-bold text-center text-indigo-700 mb-8">Product Showcase</h1>
+
+  <div id="product-list" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+
+  <script>
+    const products = [
+      {
+        id: 1,
+        name: "Wireless Headphones",
+        price: "$99.99",
+        image: "https://images.unsplash.com/photo-1585386959984-a415522baf7c?auto=format&fit=crop&w=400&q=80",
+        description: "Noise-cancelling over-ear headphones."
+      },
+      {
+        id: 2,
+        name: "Smart Watch",
+        price: "$149.99",
+        image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80",
+        description: "Track your fitness and stay connected."
+      },
+      {
+        id: 3,
+        name: "Bluetooth Speaker",
+        price: "$59.99",
+        image: "https://images.unsplash.com/photo-1585386959984-5c7b6c6b7e3e?auto=format&fit=crop&w=400&q=80",
+        description: "Portable speaker with deep bass."
+      },
+      {
+        id: 4,
+        name: "Gaming Mouse",
+        price: "$39.99",
+        image: "https://images.unsplash.com/photo-1616596872047-8e6c9b1e2a4f?auto=format&fit=crop&w=400&q=80",
+        description: "High-precision RGB gaming mouse."
+      },
+      {
+        id: 5,
+        name: "Laptop Stand",
+        price: "$29.99",
+        image: "https://images.unsplash.com/photo-1616627989397-5f6e6b5f5e3e?auto=format&fit=crop&w=400&q=80",
+        description: "Ergonomic aluminum laptop stand."
+      },
+      {
+        id: 6,
+        name: "Mechanical Keyboard",
+        price: "$89.99",
+        image: "https://images.unsplash.com/photo-1587202372775-989d1f5c1c3e?auto=format&fit=crop&w=400&q=80",
+        description: "Tactile keys with customizable RGB lighting."
+      },
+      {
+        id: 7,
+        name: "Portable SSD",
+        price: "$129.99",
+        image: "https://images.unsplash.com/photo-1587202372775-989d1f5c1c3e?auto=format&fit=crop&w=400&q=80",
+        description: "Fast and compact external storage."
+      },
+      {
+        id: 8,
+        name: "Noise-Cancelling Earbuds",
+        price: "$79.99",
+        image: "https://images.unsplash.com/photo-1606813909227-3f3c3c3c3c3c?auto=format&fit=crop&w=400&q=80",
+        description: "In-ear comfort with active noise cancellation."
+      },
+      {
+        id: 9,
+        name: "Smartphone Gimbal",
+        price: "$109.99",
+        image: "https://images.unsplash.com/photo-1606813909227-3f3c3c3c3c3c?auto=format&fit=crop&w=400&q=80",
+        description: "Stabilize your mobile videos like a pro."
+      },
+      {
+        id: 10,
+        name: "LED Desk Lamp",
+        price: "$24.99",
+        image: "https://images.unsplash.com/photo-1616627989397-5f6e6b5f5e3e?auto=format&fit=crop&w=400&q=80",
+        description: "Minimalist lamp with adjustable brightness."
+      }
+    ];
+
+    const productList = document.getElementById("product-list");
+
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-4 flex flex-col items-center";
+
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="w-full h-40 object-cover rounded-md mb-4" />
+        <h2 class="text-lg font-semibold text-gray-800 mb-1">${product.name}</h2>
+        <p class="text-sm text-gray-600 mb-2">${product.description}</p>
+        <p class="text-indigo-600 font-bold text-xl mb-2">${product.price}</p>
+        <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">Buy Now</button>
+      `;
+
+      productList.appendChild(card);
+    });
+  </script>
+</body>
+</html>
